@@ -1,0 +1,27 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.28;
+
+library Error {
+    error ADDRESS_IS_NOT_FACTORY();
+    error ADDRESS_IS_NOT_BUYER();
+    error ADDRESS_IS_NOT_SELLER();
+    error INVALID_STATUS();
+    error ADDRESS_IS_NOT_PARTY();
+    error ADDRESS_IS_NOT_ARBITRATOR();
+    error ADDRESS_IS_NOT_ESCROW();
+    error ADDRESS_CAN_NOT_BE_ADDRESS_ZERO();
+    error FACTORY_ADDRESS_CAN_NOT_BE_ADDRESS_ZERO();
+    error SELLER_ADDRESS_CAN_NOT_BE_ADDRESS_ZERO();
+    error BUYER_ADDRESS_CAN_NOT_BE_ADDRESS_ZERO();
+    error TOKEN_ADDRESS_CAN_NOT_BE_ADDRESS_ZERO();
+    error FEE_COLLECTOR_ADDRESS_CAN_NOT_BE_ADDRESS_ZERO();
+    error AMOUNT_CAN_NOT_BE_ZERO();
+    error FEE_TOO_HIGH();
+    error RELEASE_OF_FUNDS_IS_TOO_EARLY();
+    error DISPUTE_REASON_REQUIRED();
+    error INVALID_WINNER();
+    error ORDER_ID_EMPTY();
+    error ORDER_EXISTS();
+    error INSUFFICIENT_BALANCE();
+    error INSUFFICIENT_ALLOWANCE();
+}
