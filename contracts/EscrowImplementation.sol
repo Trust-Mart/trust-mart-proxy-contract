@@ -20,12 +20,12 @@ contract EscrowImplementation is Initializable, ReentrancyGuardUpgradeable {
     address public seller;
     address public token;
     uint256 public amount;
-    string public metadataUri;
-    uint16 public platformFeeBips;
+    string  public metadataUri;
+    uint16  public platformFeeBips;
     address public feeCollector;
     uint256 public createdAt;
     uint256 public releaseAfter;
-    string public disputeReason;
+    string  public disputeReason;
     address public disputeRaisedBy;
 
     enum Status { 
@@ -73,7 +73,7 @@ contract EscrowImplementation is Initializable, ReentrancyGuardUpgradeable {
         uint256 _amount,
         string memory _metadataUri,
         address _feeCollector,
-        uint16 _platformFeeBips,
+        uint16  _platformFeeBips,
         uint256 _releaseAfter
     ) external initializer {
         __ReentrancyGuard_init();
@@ -171,14 +171,14 @@ function _refundToBuyer() internal {
         address _seller,
         address _token,
         uint256 _amount,
-        Status _status,
+        Status  _status,
         uint256 _releaseAfter
     ) {
         return (buyer, seller, token, amount, status, releaseAfter);
     }
 
     function getFeeInfo() external view returns (
-        uint16 _platformFeeBips,
+        uint16  _platformFeeBips,
         address _feeCollector,
         uint256 _feeAmount,
         uint256 _netAmount
@@ -188,7 +188,7 @@ function _refundToBuyer() internal {
     }
 
     function getDisputeInfo() external view returns (
-        bool hasDispute,
+        bool    hasDispute,
         address raisedBy,
         string memory reason
     ) {

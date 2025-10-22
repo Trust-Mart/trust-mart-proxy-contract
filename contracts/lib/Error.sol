@@ -21,7 +21,11 @@ library Error {
     error DISPUTE_REASON_REQUIRED();
     error INVALID_WINNER();
     error ORDER_ID_EMPTY();
+    error METADATA_URI_IS_EMPTY();
     error ORDER_EXISTS();
+    error ORDER_DOES_NOT_EXIST();
     error INSUFFICIENT_BALANCE();
     error INSUFFICIENT_ALLOWANCE();
+    error TRANSACTION_ALREADY_PROCESSED();
+    error TRANSACTION_ALREADY_PAID();
 }

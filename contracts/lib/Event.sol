@@ -24,4 +24,19 @@ library Event {
     event FeeCollectorUpdated(address newFeeCollector);
     event ArbitratorUpdated(address newArbitrator);
     event PlatformFeeUpdated(uint16 newFeeBips);
+        event TransactionCreated(
+        address indexed seller,
+        address indexed receiver,
+        string orderId,
+        uint256 amount,
+        address token,
+        string metadataUri,
+        uint256 releaseAfter
+    );
+
+    event TransactionUpdated(
+        string orderId,
+        address indexed escrowAddress,
+        uint8 status
+    );
 }
